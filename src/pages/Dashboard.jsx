@@ -32,11 +32,11 @@ const Dashboard = () => {
         <img
           src="/Images/hero.svg"
           alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-10"
         />
 
         {/* Content Container */}
-        <div className="relative z-10 w-full min-h-screen">
+        <div className="relative z-10 w-full min-h-screen z-10">
           <div className="container mx-auto px-4 py-12 lg:py-24">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <MainContent />
