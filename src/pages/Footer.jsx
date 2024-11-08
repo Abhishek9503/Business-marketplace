@@ -28,7 +28,7 @@ const RealEstateFooter = () => {
       <div className="relative h-96 w-full">
         <div className="absolute inset-0">
           <img
-            src=""
+            src="/Images/Rectangle.svg"
             alt="Interior design"
             className="w-full h-full object-cover"
           />

@@ -5,31 +5,31 @@ const ProjectsAndClients = () => {
 
   const projects = [
     {
-      image: "project1.jpg",
+      image: "client1.svg",
       title: "Consultation",
       price: "$150-$200",
       details: "3 weeks",
     },
     {
-      image: "project2.jpg",
+      image: "client2.svg",
       title: "Design",
       price: "$150-$200",
       details: "3 weeks",
     },
     {
-      image: "project3.jpg",
+      image: "client3.svg",
       title: "Marketing & Design",
       price: "$150-$200",
       details: "3 weeks",
     },
     {
-      image: "project4.jpg",
+      image: "client4.svg",
       title: "Consultation & Marketing",
       price: "$150-$200",
       details: "3 weeks",
     },
     {
-      image: "project5.jpg",
+      image: "client5.svg",
       title: "Consultation",
       price: "$150-$200",
       details: "3 weeks",

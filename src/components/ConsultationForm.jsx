@@ -1,9 +1,9 @@
 // ConsultationForm.jsx
-import React from 'react';
+import React from "react";
 
 const ConsultationForm = () => {
   return (
-    <div className="bg-blue-900 bg-opacity-60  text-white p-6 rounded-lg shadow-lg w-full md:w-1/3">
+    <div className="w-full lg:w-5/12 bg-blue-900 bg-opacity-60 text-white p-6 rounded-lg shadow-lg">
       <h2 className="text-xl font-semibold mb-4">Get a Free Consultation</h2>
       <form className="space-y-4">
         <div>
@@ -25,7 +25,7 @@ const ConsultationForm = () => {
         <div>
           <label className="block mb-1 text-gray-200">Phone Number</label>
           <input
-            type="text"
+            type="tel"
             className="w-full p-2 rounded bg-gray-100 text-gray-900"
             placeholder="Your Phone Number"
           />
@@ -40,7 +40,7 @@ const ConsultationForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600"
+          className="w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors duration-200"
         >
           Get a Free Quote
         </button>
@@ -48,5 +48,4 @@ const ConsultationForm = () => {
     </div>
   );
 };
-
 export default ConsultationForm;

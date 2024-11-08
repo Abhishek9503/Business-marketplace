@@ -27,28 +27,32 @@ const Dashboard = () => {
 
       {/* Main Content */}
       {/* Main Content */}
-      <main className="relative flex flex-col md:flex-row items-center justify-center md:justify-between p-8 md:p-16 lg:p-24">
+      <main className="relative min-h-screen w-full overflow-hidden">
         {/* Background Image */}
         <img
           src="/Images/hero.svg"
           alt="Background"
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Main Content (set higher z-index to appear above background) */}
-        <div className="relative z-10 w-full h-full  flex justify-between items-center">
-          <MainContent />
-          <ConsultationForm />
+        {/* Content Container */}
+        <div className="relative z-10 w-full min-h-screen">
+          <div className="container mx-auto px-4 py-12 lg:py-24">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              <MainContent />
+              <ConsultationForm />
+            </div>
+          </div>
         </div>
       </main>
 
-      <WhyChooseUs/>
-      <AboutUsCollage/>
+      <WhyChooseUs />
+      <AboutUsCollage />
 
-      <AboutUsSection/>
+      <AboutUsSection />
 
-      <ProjectsAndClients/>
-      <RealEstateFooter/>
+      <ProjectsAndClients />
+      <RealEstateFooter />
     </div>
   );
 };
