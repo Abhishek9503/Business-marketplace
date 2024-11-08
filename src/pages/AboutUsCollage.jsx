@@ -4,7 +4,7 @@ const AboutUsCollage = () => {
   return (
     <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
       {/* Main container with proper aspect ratio and responsive sizing */}
-      <div className="relative w-full py-16">
+      <div className="relative w-full ">
         {/* Image container with preserved aspect ratio */}
         <div className="relative w-full aspect-[16/9] md:aspect-[16/7]">
           <img

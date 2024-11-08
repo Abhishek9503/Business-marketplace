@@ -9,6 +9,7 @@ import AboutUsCollage from "./AboutUsCollage";
 import AboutUsSection from "./AboutUs";
 import ProjectsAndClients from "./ProjectsAndClients";
 import RealEstateFooter from "./Footer";
+import AboutSection from "../components/AboutSection";
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -25,8 +26,7 @@ const Dashboard = () => {
       {/* Sidebar for Mobile */}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
-      {/* Main Content */}
-      {/* Main Content */}
+  
       <main className="relative min-h-screen w-full overflow-hidden">
         {/* Background Image */}
         <img
@@ -36,7 +36,7 @@ const Dashboard = () => {
         />
 
         {/* Content Container */}
-        <div className="relative z-10 w-full min-h-screen z-10">
+        <div className="relative z-10 w-full min-h-screen ">
           <div className="container mx-auto px-4 py-12 lg:py-24">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <MainContent />

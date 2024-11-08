@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const features = [
@@ -26,13 +26,13 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center p-8 md:p-16 lg:p-24 space-y-16">
+    <section className="relative flex flex-col items-center  md:p-10 lg:p-12 space-y-16">
       <img
         src="Images/ValuePage.png"
         alt="Background"
         className="absolute inset-0 object-cover -z-10"
       />
-      
+
       <img
         src="Images/dot.png"
         alt="Background"
@@ -50,12 +50,13 @@ const WhyChooseUs = () => {
             Not Your Average Realtor
           </h2>
           <p className="text-gray-600 max-w-lg mx-auto">
-            We offer top-tier service to help you get the most from your property. 
-            Our team leverages design, marketing, and analytics to get you the best results.
+            We offer top-tier service to help you get the most from your
+            property. Our team leverages design, marketing, and analytics to get
+            you the best results.
           </p>
         </div>
 
-        <div className="mt-48 w-full">
+        <div className="mt-48 w-full visibility-none mb-24">
           <section className="relative flex flex-col items-center space-y-8">
             <div className="text-center space-y-4 mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-blue-900">

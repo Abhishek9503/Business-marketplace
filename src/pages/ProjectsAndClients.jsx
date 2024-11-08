@@ -161,24 +161,20 @@ const ProjectsAndClients = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="min-w-[200px] w-1/3 flex-shrink-0 flex flex-col items-center text-center  bg-gray-100 rounded-lg shadow-lg space-y-4 hover:shadow-xl transition-shadow duration-300"
             >
               <img
                 src={`/Images/${project.image}`}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4 text-center">
-                <h3 className="font-semibold text-blue-900 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  {project.price} - {project.details}
-                </p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors">
-                  LEARN MORE
-                </button>
-              </div>
+              <div className="text-5xl mb-2">{project.icon}</div>
+              <h4 className="text-xl font-semibold text-blue-900">
+                {project.title}
+              </h4>
+              <p className="text-base text-gray-600">
+                {project.price} - {project.details}
+              </p>
             </div>
           ))}
         </div>
