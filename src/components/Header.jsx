@@ -14,7 +14,12 @@ const Header = ({ toggleSidebar }) => {
   return (
     <header className="flex justify-between items-center p-4 pr-20 pl-20 bg-white shadow-md">
       <div>
-        <img src="/Images/logo.svg" className="w-auto h-10" alt="" />
+        <img
+          loading="lazy"
+          src="/Images/logo.svg"
+          className="w-auto h-10"
+          alt=""
+        />
       </div>
       {/* Desktop Navbar */}
       <div className="flex items-center  gap-20">

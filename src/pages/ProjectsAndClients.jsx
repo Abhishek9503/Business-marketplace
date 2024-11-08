@@ -1,40 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-const ProjectsAndClients = () => {
-  const clientsContainerRef = useRef(null);
-
-  const projects = [
-    {
-      image: "client1.svg",
-      title: "Consultation",
-      price: "$150-$200",
-      details: "3 weeks",
-    },
-    {
-      image: "client2.svg",
-      title: "Design",
-      price: "$150-$200",
-      details: "3 weeks",
-    },
-    {
-      image: "client3.svg",
-      title: "Marketing & Design",
-      price: "$150-$200",
-      details: "3 weeks",
-    },
-    {
-      image: "client4.svg",
-      title: "Consultation & Marketing",
-      price: "$150-$200",
-      details: "3 weeks",
-    },
-    {
-      image: "client5.svg",
-      title: "Consultation",
-      price: "$150-$200",
-      details: "3 weeks",
-    },
-  ];
+const Marquee = () => {
+  const [isHovered, setIsHovered] = useState(false);
 
   const clients = [
     {
@@ -73,8 +41,22 @@ const ProjectsAndClients = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
     },
     {
-      image: "client1.svg",
-      name: "Benjamin Smith",
+      image: "client2.svg",
+      name: "Diana Kwak",
+      role: "Real Estate Agent",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    },
+    {
+      image: "client3.svg",
+      name: "John Lepora",
+      role: "Real Estate Agent",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    },
+    {
+      image: "client4.svg",
+      name: "Kerry Freeman",
       role: "Real Estate Agent",
       review:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
@@ -100,104 +82,40 @@ const ProjectsAndClients = () => {
       review:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
     },
-    {
-      image: "client6.svg",
-      name: "Lucy",
-      role: "Real Estate Agent",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-    },
   ];
-
-  useEffect(() => {
-    const container = clientsContainerRef.current;
-    let scrollInterval;
-
-    const startScrolling = () => {
-      scrollInterval = setInterval(() => {
-        if (
-          container.scrollLeft + container.clientWidth >=
-          container.scrollWidth
-        ) {
-          container.scrollLeft = 0;
-        } else {
-          container.scrollLeft += container.clientWidth / 2;
-        }
-      }, 1000);
-    };
-
-    const stopScrolling = () => {
-      clearInterval(scrollInterval);
-    };
-
-    startScrolling();
-
-    container.addEventListener("mouseenter", stopScrolling);
-    container.addEventListener("mouseleave", startScrolling);
-
-    return () => {
-      clearInterval(scrollInterval);
-      container?.removeEventListener("mouseenter", stopScrolling);
-      container?.removeEventListener("mouseleave", startScrolling);
-    };
-  }, []);
 
   return (
     <div className="w-full bg-white py-16 md:py-24">
-      {/* Projects Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-            Our Projects
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We know what buyers are looking for and suggest projects that will
-            bring clients top dollar for the sale of their homes.
-          </p>
-        </div>
-
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="min-w-[200px] w-1/3 flex-shrink-0 flex flex-col items-center text-center  bg-gray-100 rounded-lg shadow-lg space-y-4 hover:shadow-xl transition-shadow duration-300"
-            >
-              <img
-                src={`/Images/${project.image}`}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="text-5xl mb-2">{project.icon}</div>
-              <h4 className="text-xl font-semibold text-blue-900">
-                {project.title}
-              </h4>
-              <p className="text-base text-gray-600">
-                {project.price} - {project.details}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Happy Clients Section */}
-      <div className="mt-24">
+      <div className="">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-16">
           Happy Clients
         </h2>
 
-        {/* Auto-scrolling Clients Container */}
-        <div
-          ref={clientsContainerRef}
+        {/* Marquee Effect Clients Container */}
+        <motion.div
           className="overflow-x-hidden whitespace-nowrap"
+          animate={{
+            x: isHovered ? 0 : ["0%", "-100%"], // Animate between 0% and -100%
+          }}
+          transition={{
+            x: {
+              repeat: Infinity, // Infinite loop
+              repeatType: "mirror", // Reverse the direction after each loop
+              duration: 20, // Adjust speed here
+              ease: "linear", // Constant speed for smooth scrolling
+            },
+          }}
+          onMouseEnter={() => setIsHovered(true)} // Pause scroll on hover
+          onMouseLeave={() => setIsHovered(false)} // Resume scroll when hover ends
         >
           <div className="inline-flex gap-6 px-4">
+            {/* Duplicate the clients array to create the seamless loop */}
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={index}
                 className="w-72 inline-block whitespace-normal bg-white rounded-lg p-6 shadow-md"
               >
-                <img
+                <img loading="lazy"
                   src={`/Images/${client.image}`}
                   alt={client.name}
                   className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
@@ -214,10 +132,10 @@ const ProjectsAndClients = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
 
-export default ProjectsAndClients;
+export default Marquee;

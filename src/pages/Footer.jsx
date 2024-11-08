@@ -27,7 +27,7 @@ const RealEstateFooter = () => {
       {/* Hero Section */}
       <div className="relative h-96 w-full">
         <div className="absolute inset-0">
-          <img
+          <img loading="lazy"
             src="/Images/Rectangle.svg"
             alt="Interior design"
             className="w-full h-full object-cover"

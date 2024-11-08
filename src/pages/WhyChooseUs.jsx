@@ -27,13 +27,13 @@ const WhyChooseUs = () => {
 
   return (
     <section className="relative flex flex-col items-center  md:p-10 lg:p-12 space-y-16">
-      <img
+      <img loading="lazy"
         src="Images/ValuePage.png"
         alt="Background"
         className="absolute inset-0 object-cover -z-10"
       />
 
-      <img
+      <img loading="lazy"
         src="Images/dot.png"
         alt="Background"
         className="absolute inset-0 object-cover -z-2 top-52"

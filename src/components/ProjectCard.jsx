@@ -6,7 +6,7 @@ const ProjectCard = ({ project, index }) => {
       key={index}
       className="min-w-[280px] w-1/3 flex-shrink-0  bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
     >
-      <img
+      <img loading="lazy"
         src={`/Images/${project.image}`}
         alt={project.title}
         className="w-full h-48 object-cover"

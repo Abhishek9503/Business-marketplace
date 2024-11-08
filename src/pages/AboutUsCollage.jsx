@@ -7,7 +7,7 @@ const AboutUsCollage = () => {
       <div className="relative w-full ">
         {/* Image container with preserved aspect ratio */}
         <div className="relative w-full aspect-[16/9] md:aspect-[16/7]">
-          <img
+          <img loading="lazy"
             src="/Images/aboutusCollage.png"
             alt="About Us Collage"
             className="w-full h-full object-contain"

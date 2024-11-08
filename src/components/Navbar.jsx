@@ -31,7 +31,7 @@ const Navbar() {
   return (
     <div className="flex justify-between px-32 tracking-tight py-1">
       <Link to="/home" className="py-2">
-        <img src="/icons/logo.svg" className="w-auto h-10" />
+        <img loading="lazy" src="/icons/logo.svg" className="w-auto h-10" />
       </Link>
       <div className="flex gap-10 items-center">
         <div>

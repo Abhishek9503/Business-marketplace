@@ -29,7 +29,7 @@ const Dashboard = () => {
   
       <main className="relative min-h-screen w-full overflow-hidden">
         {/* Background Image */}
-        <img
+        <img loading="lazy"
           src="/Images/hero.svg"
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover z-10"
