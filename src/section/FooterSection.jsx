@@ -21,6 +21,17 @@ const NavLink = ({ href, children }) => (
   </a>
 );
 
+/**
+ * RealEstateFooter component renders the footer section of a real estate website.
+ * It includes a hero section with an image and a call-to-action button, a navigation bar with links and a subscription form,
+ * and a footer with copyright information, a logo, and social media links.
+ *
+ * @component
+ * @example
+ * return (
+ *   <RealEstateFooter />
+ * )
+ */
 const RealEstateFooter = () => {
   return (
     <div className="flex flex-col w-full">

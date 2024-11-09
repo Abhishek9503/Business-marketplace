@@ -93,7 +93,7 @@ const Marquee = () => {
 
         {/* Marquee Effect Clients Container */}
         <motion.div
-          className="overflow-x-hidden whitespace-nowrap"
+          className="overflow-x-hidden "
           animate={{
             x: isHovered ? 0 : ["0%", "-100%"], // Animate between 0% and -100%
           }}
@@ -101,7 +101,7 @@ const Marquee = () => {
             x: {
               repeat: Infinity, // Infinite loop
               repeatType: "mirror", // Reverse the direction after each loop
-              duration: 20, // Adjust speed here
+              duration: 10, // Adjust speed here
               ease: "linear", // Constant speed for smooth scrolling
             },
           }}

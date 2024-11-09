@@ -1,5 +1,15 @@
 import React from "react";
 
+/**
+ * AboutUsSection component renders the "About Us" section of the webpage.
+ * It includes a title, a description, and a "Learn More" button with hover effects.
+ *
+ * @component
+ * @example
+ * return (
+ *   <AboutUsSection />
+ * )
+ */
 const AboutUsSection = () => {
   return (
     <div className="w-full bg-gradient-to-b from-white to-blue-50/30">
