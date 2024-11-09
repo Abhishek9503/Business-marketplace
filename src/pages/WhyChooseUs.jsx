@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
               </p>
             </div>
 
-            <div className="relative flex items-center w-full max-w-5xl mx-auto">
+            <div className="relative flex items-center w-full max-w-7xl mx-auto">
               <div
                 id="feature-scroll-container"
                 className="flex gap-6 overflow-x-hidden scroll-smooth mx-auto p-4"
